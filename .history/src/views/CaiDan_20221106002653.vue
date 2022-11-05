@@ -39,7 +39,7 @@
                <el-form-item label="图片" :label-width="formLabelWidth">
                   <el-upload
                      class="avatar-uploader"
-                     action="http://101.43.132.60:8988/elm/comment/insert"
+                     action="http://47.101.196.82:8988/elm/comment/insert"
                      :data="{
                         businessId: form.businessId,
                         commentText: form.commentText,
@@ -370,7 +370,7 @@ export default {
       submitCommment() {
          this.$axios({
             method: "post",
-            url: "http://101.43.132.60:8988/elm/comment/insert",
+            url: "http://47.101.196.82:8988/elm/comment/insert",
             headers: {
                "Content-Type": "multipart/form-data",
             },
@@ -391,7 +391,7 @@ export default {
       //根据userId和businessID获取购物车
       getCart() {
          this.$axios
-            .get("http://101.43.132.60:8988/elm/cart/listCart", {
+            .get("http://47.101.196.82:8988/elm/cart/listCart", {
                params: {
                   userId: this.user.userId,
                   businessId: this.businessId,
@@ -465,7 +465,7 @@ export default {
       saveCart(indexOut, indexIn, foodId) {
          this.$axios
             .post(
-               "http://101.43.132.60:8988/elm/cart/saveCart",
+               "http://47.101.196.82:8988/elm/cart/saveCart",
                this.$qs.stringify({
                   businessId: this.businessId,
                   foodId: foodId,
@@ -488,7 +488,7 @@ export default {
       updateCart(indexOut, indexIn, foodId, quantity, num) {
          this.$axios
             .put(
-               "http://101.43.132.60:8988/elm/cart/updateCart",
+               "http://47.101.196.82:8988/elm/cart/updateCart",
                this.$qs.stringify({
                   businessId: this.businessId,
                   foodId: foodId,
@@ -511,7 +511,7 @@ export default {
       //删除购物车方法
       removeCart(indexOut, indexIn, foodId) {
          this.$axios //delete方式请求，传递参数是一个JSON对象，使用data属性传递
-            .delete("http://101.43.132.60:8988/elm/cart/removeCart", {
+            .delete("http://47.101.196.82:8988/elm/cart/removeCart", {
                data: {
                   businessId: this.businessId,
                   foodId: foodId,
@@ -540,7 +540,7 @@ export default {
       //获取商家信息 & 商家对应的食物
       this.$axios
          .get(
-            "http://101.43.132.60:8988/elm/business/searchBusinessFood/" +
+            "http://47.101.196.82:8988/elm/business/searchBusinessFood/" +
                this.businessId
          )
          .then((response) => {
@@ -555,7 +555,7 @@ export default {
       //根据商家id获取食品信息
       this.$axios
          .get(
-            "http://101.43.132.60:8988/elm/foodClassify/getBusinessId/" +
+            "http://47.101.196.82:8988/elm/foodClassify/getBusinessId/" +
                this.businessId
          )
          .then((response) => {
@@ -580,7 +580,7 @@ export default {
       //根据商家ID查询「评论」
       this.$axios
          .get(
-            "http://101.43.132.60:8988/elm/comment/getBusinessId/" +
+            "http://47.101.196.82:8988/elm/comment/getBusinessId/" +
                this.businessId
          )
          .then((response) => {

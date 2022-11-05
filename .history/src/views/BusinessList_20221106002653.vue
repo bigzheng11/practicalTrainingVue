@@ -56,7 +56,7 @@ export default {
       //生命周期的方法：
       this.$axios
          .get(
-            "http://101.43.132.60:8988/elm/business/categoryBusiness/" +
+            "http://47.101.196.82:8988/elm/business/categoryBusiness/" +
                this.categoryId
          )
          .then((response) => {
@@ -83,7 +83,7 @@ export default {
       listCart() {
          //读取购物车中的数据
          this.$axios
-            .get("http://101.43.132.60:8988/elm/cart/listCart", {
+            .get("http://47.101.196.82:8988/elm/cart/listCart", {
                params: {
                   userId: this.user.userId,
                   // businessId: this.business.businessId,   //商家的id在businessList页面不存在，不传递参数

@@ -20,7 +20,7 @@
          <div class="userImg">
             <el-upload
                class="avatar-uploader"
-               action="http://47.101.196.82:8988/elm/user/update"
+               action="http://101.43.132.60:8988/elm/user/update"
                :data="{ userId: user.userId }"
                :show-file-list="false"
                :on-success="handleAvatarSuccess"
@@ -160,7 +160,7 @@ export default {
 
             this.$axios
                .post(
-                  "http://47.101.196.82:8988/elm/user/checkPassword",
+                  "http://101.43.132.60:8988/elm/user/checkPassword",
                   this.$qs.stringify({
                      userId: this.user.userId,
                      checkPassword: this.ruleForm.password,
@@ -287,7 +287,7 @@ export default {
                delete this.ruleForm.checkPass;
 
                this.$axios({
-                  url: "http://47.101.196.82:8988/elm/user/update",
+                  url: "http://101.43.132.60:8988/elm/user/update",
                   method: "POST",
                   headers: {
                      "content-type": "application/x-www-form-urlencoded",
@@ -388,12 +388,12 @@ export default {
          this.open4();
          this.$router.push("/userAddress");
       }
-      
+
       this.deliveryAddress = this.$getLocalStorage(this.user.userId);
 
       //获取用户评论信息
       this.$axios
-         .get("http://47.101.196.82:8988/elm/comment/list/" + this.user.userId)
+         .get("http://101.43.132.60:8988/elm/comment/list/" + this.user.userId)
          .then((response) => {
             this.commentList = response.data.map.commentList;
          })

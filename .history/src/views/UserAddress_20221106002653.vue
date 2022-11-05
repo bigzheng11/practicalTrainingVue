@@ -2,6 +2,7 @@
    <div class="wrapper">
       <!-- header部分 -->
       <header>
+         
          <p>地址管理</p>
       </header>
 
@@ -62,6 +63,8 @@ export default {
       Footer,
    },
    methods: {
+      
+
       //----------------
       open(daId) {
          this.$confirm("此操作将永久删除该文件, 是否继续?", "提示", {
@@ -74,7 +77,7 @@ export default {
                //删除的操作 address/delete/{daId}
                this.$axios
                   .get(
-                     "http://101.43.132.60:8988/elm/delivery/removeAddress/" +
+                     "http://47.101.196.82:8988/elm/delivery/removeAddress/" +
                         daId
                   )
                   .then((response) => {
@@ -114,7 +117,7 @@ export default {
       listDeliveryAddressByUserId() {
          this.$axios
             .get(
-               "http://101.43.132.60:8988/elm/delivery/listById/" +
+               "http://47.101.196.82:8988/elm/delivery/listById/" +
                   this.user.userId
             )
             .then((response) => {

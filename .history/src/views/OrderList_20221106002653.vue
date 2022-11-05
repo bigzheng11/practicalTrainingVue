@@ -100,7 +100,7 @@ export default {
       //请求服务器API:  orders/getByUserId/{userId}
       this.$axios
          .get(
-            "http://101.43.132.60:8988/elm/orders/information/" +
+            "http://47.101.196.82:8988/elm/orders/information/" +
                this.user.userId
          )
          .then((response) => {
@@ -121,7 +121,7 @@ export default {
 
       //测试
       this.$axios
-         .get("http://101.43.132.60:8988/elm/food/getFoodId/2021070201")
+         .get("http://47.101.196.82:8988/elm/food/getFoodId/2021070201")
          .then((response) => {
             console.log("==============================");
             console.log(response);
@@ -160,8 +160,11 @@ export default {
 
             let header = document.querySelector("header");
             header.style.backgroundColor = "grey";
+
          }, 400);
       }
+
+
    },
 
    components: {

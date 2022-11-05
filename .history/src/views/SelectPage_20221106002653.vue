@@ -75,7 +75,7 @@ export default {
          selectLength: 0,
          //标签
          tags: [],
-         index: 0,
+         index:0
       };
    },
 
@@ -101,7 +101,7 @@ export default {
             //获取商家列表
             this.$axios
                .get(
-                  "http://101.43.132.60:8988/elm/business/getBusinessName/" +
+                  "http://47.101.196.82:8988/elm/business/getBusinessName/" +
                      this.input
                )
                .then((response) => {
@@ -116,9 +116,9 @@ export default {
                      let Obj = {};
                      Obj.name = this.input;
                      Obj.type = "";
-                     Obj.id = this.index;
+                     Obj.id=this.index
                      this.tags.push(Obj);
-                     this.index += 1;
+                     this.index+=1
                   }
                })
                .catch((error) => {
@@ -128,7 +128,7 @@ export default {
             //获取食品列表
             this.$axios
                .get(
-                  "http://101.43.132.60:8988/elm/food/getFoodName/" + this.input
+                  "http://47.101.196.82:8988/elm/food/getFoodName/" + this.input
                )
                .then((response) => {
                   this.foodList = response.data.map.food;

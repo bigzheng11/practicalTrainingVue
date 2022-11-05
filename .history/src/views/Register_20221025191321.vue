@@ -100,7 +100,7 @@ export default {
          //检查用户userID是否已经注册过。  userId就是手机号
          this.$axios
             .get(
-               "http://47.101.196.82:8988/elm/user/checkId/" + this.user.userId
+               "http://101.43.132.60:8988/elm/user/checkId/" + this.user.userId
             )
             .then((response) => {
                if (response.data.code == 20005) {
@@ -137,9 +137,9 @@ export default {
          //注册：服务器API:user/saveUser
          // this.$qs.stringify(this.user) 将JSON对象形式 转为  参数形式   key=value&key=value
          this.$axios
-            .post("http://47.101.196.82:8988/elm/user/addUser",this.user)
+            .post("http://101.43.132.60:8988/elm/user/addUser", this.user)
             .then((response) => {
-               console.log(response.data)
+               console.log(response.data);
                if (response.data.code == 1) {
                   alert("注册成功");
                   this.$router.back();

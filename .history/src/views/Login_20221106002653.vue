@@ -71,7 +71,7 @@ export default {
             return;
          }
          this.$axios
-            .post("http://101.43.132.60:8988/elm/user/login", this.user)
+            .post("http://47.101.196.82:8988/elm/user/login", this.user)
             .then((response) => {
                let userinfo = response.data.map.user;
 

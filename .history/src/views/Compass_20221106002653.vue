@@ -89,7 +89,7 @@ export default {
       //请求数据库中的订单数据，用于绑定页面需要显示的数据，信息表中的status字段是记录该消息是否已经被读过
       this.$axios
          .get(
-            "http://101.43.132.60:8988/elm/websocket/checkOrderMessage/" +
+            "http://47.101.196.82:8988/elm/websocket/checkOrderMessage/" +
                this.user.userId
          )
          .then((response) => {
@@ -101,6 +101,7 @@ export default {
             });
 
             this.listOrderStatus = response.data.map;
+
          })
          .catch((error) => {
             console.log(error);
@@ -125,7 +126,7 @@ export default {
       //删除消息,刷新页面
       deleteTest(mid) {
          this.$axios
-            .get("http://101.43.132.60:8988/elm/message/eliminate/" + mid)
+            .get("http://47.101.196.82:8988/elm/message/eliminate/" + mid)
             .then((response) => {
                this.$router.go(0);
             })
@@ -146,7 +147,7 @@ export default {
          this.allList[index].message.status = 1;
          this.$axios
             .post(
-               "http://101.43.132.60:8988/elm/message/updateOrderByIdState",
+               "http://47.101.196.82:8988/elm/message/updateOrderByIdState",
                {
                   mid: mide,
                   status: 1,
@@ -192,7 +193,7 @@ export default {
        */
       wsInit() {
          const wsuri =
-            "ws://101.43.132.60:8988/elm/websocket/" + this.user.userId;
+            "ws://47.101.196.82:8988/elm/websocket/" + this.user.userId;
          this.ws = wsuri;
          if (!this.wsIsRun) return;
          // 销毁ws

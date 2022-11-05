@@ -72,11 +72,12 @@ export default {
       console.log("订单号:-->", this.orderId);
       //请求服务器API，获取订单与商家的信息  orders/getById/orderId
       this.$axios
-         .get("http://101.43.132.60:8988/elm/orders/pageNew/" + this.orderId)
+         .get("http://47.101.196.82:8988/elm/orders/pageNew/" + this.orderId)
          .then((response) => {
             //console.log(response.data)
             this.orders = response.data.map.order;
             console.log("this.orders--->", this.orders);
+            
          })
          .catch((error) => {
             console.log(error);
@@ -101,8 +102,8 @@ export default {
       //支付--修改订单状态
       payUpdate() {
          this.$axios
-            .post(
-               "http://101.43.132.60:8988/elm/orders/updateStatus",
+            .post(  
+               "http://47.101.196.82:8988/elm/orders/updateStatus",
                this.$qs.stringify({
                   orderId: this.orderId,
                   orderState: this.status,

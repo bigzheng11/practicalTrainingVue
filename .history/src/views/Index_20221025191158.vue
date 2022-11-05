@@ -125,7 +125,7 @@ export default {
       // ----------------------↓↓axios请求↓↓---------------------------
       //商家分类请求
       this.$axios
-         .get("http://47.101.196.82:8988/elm/category/search")
+         .get("http://101.43.132.60:8988/elm/category/search")
          .then((response) => {
             this.categoryList = response.data.map.list;
 
@@ -138,7 +138,7 @@ export default {
 
       //获取所有商家信息
       this.$axios
-         .get("http://47.101.196.82:8988/elm/business/search")
+         .get("http://101.43.132.60:8988/elm/business/search")
          .then((response) => {
             this.businessList = response.data.map.businessList;
             this.businessListTemp = JSON.parse(
@@ -348,7 +348,7 @@ export default {
    justify-content: space-around;
    /*要使用align-content。10个子元素将自动换行为两行，而且两行作为一个整体垂直居中*/
    align-content: center;
-   /* background-color: black; */   
+   /* background-color: black; */
 }
 
 .wrapper .foodtype li {

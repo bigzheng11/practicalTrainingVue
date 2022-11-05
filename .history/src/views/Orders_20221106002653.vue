@@ -80,7 +80,7 @@ export default {
       //请求服务端API: 根据商家编号businessId查询当前商家信息：business/getBusinessId/{businessId}
       this.$axios
          .get(
-            "http://101.43.132.60:8988/elm/business/searchBusinessFood/" +
+            "http://47.101.196.82:8988/elm/business/searchBusinessFood/" +
                this.businessId
          )
          .then((response) => {
@@ -95,7 +95,7 @@ export default {
       console.log("this.businessId:--->", this.businessId);
       //查询当前用户 购物车信息
       this.$axios
-         .get("http://101.43.132.60:8988/elm/cart/listCart", {
+         .get("http://47.101.196.82:8988/elm/cart/listCart", {
             params: {
                userId: this.user.userId,
                businessId: this.businessId,
@@ -145,7 +145,7 @@ export default {
          //生成订单
          this.$axios
             .post(
-               "http://101.43.132.60:8988/elm/orders/create",
+               "http://47.101.196.82:8988/elm/orders/create",
                this.$qs.stringify({
                   userId: this.user.userId,
                   businessId: this.businessId,
