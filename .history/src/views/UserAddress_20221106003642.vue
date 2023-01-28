@@ -74,7 +74,7 @@ export default {
                //删除的操作 address/delete/{daId}
                this.$axios
                   .get(
-                     "http://101.43.132.60:8988/elm/delivery/removeAddress/" +
+                     "http://4j89034j54.zicp.vip:8988/elm/delivery/removeAddress/" +
                         daId
                   )
                   .then((response) => {
@@ -114,7 +114,7 @@ export default {
       listDeliveryAddressByUserId() {
          this.$axios
             .get(
-               "http://101.43.132.60:8988/elm/delivery/listById/" +
+               "http://4j89034j54.zicp.vip:8988/elm/delivery/listById/" +
                   this.user.userId
             )
             .then((response) => {

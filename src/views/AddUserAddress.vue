@@ -115,7 +115,7 @@ export default {
          //ajax请求，保存地址信息
          this.$axios
             .post(
-               "http://101.43.132.60:8988/elm/delivery/saveAddress",
+               "http://4j89034j54.zicp.vip:8988/elm/delivery/saveAddress",
                this.$qs.stringify(this.deliveryAddress)
             )
             .then((response) => {

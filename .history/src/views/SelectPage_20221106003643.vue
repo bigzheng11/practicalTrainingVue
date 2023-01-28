@@ -101,7 +101,7 @@ export default {
             //获取商家列表
             this.$axios
                .get(
-                  "http://101.43.132.60:8988/elm/business/getBusinessName/" +
+                  "http://4j89034j54.zicp.vip:8988/elm/business/getBusinessName/" +
                      this.input
                )
                .then((response) => {
@@ -128,7 +128,8 @@ export default {
             //获取食品列表
             this.$axios
                .get(
-                  "http://101.43.132.60:8988/elm/food/getFoodName/" + this.input
+                  "http://4j89034j54.zicp.vip:8988/elm/food/getFoodName/" +
+                     this.input
                )
                .then((response) => {
                   this.foodList = response.data.map.food;

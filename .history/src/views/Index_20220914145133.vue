@@ -125,7 +125,7 @@ export default {
       // ----------------------↓↓axios请求↓↓---------------------------
       //商家分类请求
       this.$axios
-         .get("http://101.43.132.60:8988/elm/category/search")
+         .get("http://4j89034j54.zicp.vip:8988/elm/category/search")
          .then((response) => {
             this.categoryList = response.data.map.list;
 
@@ -138,7 +138,7 @@ export default {
 
       //获取所有商家信息
       this.$axios
-         .get("http://101.43.132.60:8988/elm/business/search")
+         .get("http://4j89034j54.zicp.vip:8988/elm/business/search")
          .then((response) => {
             console.log(response);
             this.businessList = response.data.map.businessList;

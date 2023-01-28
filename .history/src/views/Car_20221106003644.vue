@@ -169,7 +169,7 @@ export default {
       minus(businessIdArgs, foodIdArgs, indexOutArgs, indexInArgs) {
          this.$axios
             .put(
-               "http://101.43.132.60:8988/elm/cart/updateCart",
+               "http://4j89034j54.zicp.vip:8988/elm/cart/updateCart",
                this.$qs.stringify({
                   businessId: businessIdArgs,
                   foodId: foodIdArgs,
@@ -196,7 +196,7 @@ export default {
       add(businessIdArgs, foodIdArgs, indexOutArgs, indexInArgs) {
          this.$axios
             .put(
-               "http://101.43.132.60:8988/elm/cart/updateCart",
+               "http://4j89034j54.zicp.vip:8988/elm/cart/updateCart",
                this.$qs.stringify({
                   businessId: businessIdArgs,
                   foodId: foodIdArgs,
@@ -233,7 +233,8 @@ export default {
       //获取用户userId,所有购物车
       this.$axios
          .get(
-            "http://101.43.132.60:8988/elm/cart/getUserId/" + this.user.userId
+            "http://4j89034j54.zicp.vip:8988/elm/cart/getUserId/" +
+               this.user.userId
          )
          .then((response) => {
             this.allList = response.data.map.getUserId;
